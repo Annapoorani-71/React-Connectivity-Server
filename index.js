@@ -19,7 +19,7 @@ const UserSchema = new mongoose.Schema({
 });
 
 
-const User = mongoose.model('students', UserSchema);
+const User = mongoose.model('his', UserSchema);
 
 app.use(express.json());
 app.use(cors());
