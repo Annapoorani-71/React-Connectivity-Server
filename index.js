@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000;
 
-mongoose.connect('mongodb://127.0.0.1:27017/IT-A')
+mongoose.connect('mongodb://127.0.0.1:27017/IT-A')            //IT-A is a database name
     .then(() => {
         console.log('Connected to IT-A database');
     })
