@@ -40,10 +40,9 @@ app.post('/register', async (req, resp) => {
         const user = new User(req.body);
         const result = await user.save();
         const userWithoutPassword = result.toObject();
-        delete userWithoutPassword.password;
-
+        
         resp.send(userWithoutPassword);
-        console.log(userWithoutPassword);
+       
     } catch (e) {
         console.error(e);
         resp.status(500).send('Something Went Wrong');
